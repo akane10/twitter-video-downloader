@@ -1,0 +1,15 @@
+[package]
+name = "api"
+version = "0.1.0"
+authors = ["yapie <targaryen.akane@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4" 
+rocket_contrib = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+downloader = { path = "../downloader" }
+tokio = { version = "0.2", features = ["full"] }

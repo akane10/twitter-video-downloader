@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "downloader",
+    "api"
+]

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  </head>
+  <body>
+    <section class="hero is-dark is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-two-thirds">
+              <div class="field has-addons" style="width=100%">
+                <div class="control is-expanded has-text-centered">
+                  <input
+                    autofocus
+                    id="input-url"
+                    class="input"
+                    type="text"
+                    placeholder="https://twitter.com/someusername/status/13218XXX"
+                  />
+                </div>
+                <div class="control">
+                  <a class="button is-info" id="btn-get-link">
+                    Get Link Download
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns is-centered" style="padding-top:1em">
+            <div class="column is-two-thirds">
+              <div class="buttons" id="result"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
