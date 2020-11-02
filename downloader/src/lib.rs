@@ -1,11 +1,10 @@
-use oauth1_request as oauth;
-// use std::fs::File;
-// use reqwest::multipart;
 use dotenv;
+use oauth1_request as oauth;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::collections::HashMap;
 use std::error::Error;
+// use std::fs::File;
 use url::Url;
 
 type Hjson = HashMap<String, Value>;
@@ -26,6 +25,16 @@ struct Variant {
     bitrate: Option<u32>,
     content_type: Option<String>,
     url: Option<String>,
+}
+
+impl Variant {
+    fn _new(b: Option<u32>, c: Option<String>, u: Option<String>) -> Self {
+        Variant {
+            bitrate: b,
+            content_type: c,
+            url: u,
+        }
+    }
 }
 
 async fn get_tweet(id: &str) -> Result<Hjson, Box<dyn Error>> {
@@ -63,9 +72,9 @@ async fn get_tweet(id: &str) -> Result<Hjson, Box<dyn Error>> {
     Ok(res)
 }
 
-fn get_urls(v: Vec<Variant>) -> Vec<String> {
-    v.into_iter()
-        .fold(Vec::new(), |mut acc, val| match val.url {
+fn get_urls(v: &Vec<Variant>) -> Vec<String> {
+    v.iter()
+        .fold(Vec::new(), |mut acc, val| match val.url.clone() {
             Some(v) => {
                 if v.contains("mp4") {
                     acc.push(v);
@@ -93,7 +102,7 @@ pub async fn get_vid_urls(id: &str) -> Result<Vec<String>, Box<dyn Error>> {
     };
 
     // println!("{:?}", get_urls(x));
-    let urls = get_urls(x);
+    let urls = get_urls(&x);
     Ok(urls)
 }
 
@@ -112,9 +121,9 @@ pub fn get_id(url: &str) -> Result<Option<String>, Box<dyn Error>> {
     }
 }
 
-pub fn get_size(urls: Vec<String>) -> Result<Vec<Input>, Box<dyn Error>> {
+pub fn get_size(urls: &Vec<String>) -> Result<Vec<Input>, Box<dyn Error>> {
     let x: Vec<Input> = urls
-        .into_iter()
+        .iter()
         .map(|url| {
             let list_url = Url::parse(&url);
 
@@ -130,12 +139,74 @@ pub fn get_size(urls: Vec<String>) -> Result<Vec<Input>, Box<dyn Error>> {
                         }
                     });
 
-                    Input { url, size }
+                    Input {
+                        url: url.to_string(),
+                        size,
+                    }
                 }
-                _ => Input { url, size: None },
+                _ => Input {
+                    url: url.to_string(),
+                    size: None,
+                },
             }
         })
         .collect();
 
     Ok(x)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[tokio::test]
+    async fn get_tweet_test() {
+        let res = get_tweet("1322890773118001153").await;
+        assert!(res.is_ok());
+    }
+
+    #[tokio::test]
+    async fn get_tweet_wrong_id() {
+        let res = get_tweet("122890773118001153").await;
+        assert!(res.is_ok());
+    }
+
+    #[tokio::test]
+    async fn get_vid_urls_test() {
+        let res = get_vid_urls("1322890773118001153").await;
+        assert!(res.is_ok());
+    }
+
+    #[tokio::test]
+    async fn get_vid_urls_wrong_id() {
+        let res = get_vid_urls("122890773118001153").await.unwrap();
+        assert!(res.is_empty());
+    }
+
+    #[tokio::test]
+    async fn get_size_test() {
+        let urls = vec![
+            "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/480x480/rLx684w1bBcHv2Tq.mp4?tag=9".to_string(),
+            "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/320x320/-oyV5_rwvgthsq8X.mp4?tag=9".to_string(),
+            "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/640x640/8lpcDipUtTOmeYDl.mp4?tag=9".to_string()
+        ];
+
+        let res = get_size(&urls);
+        assert!(res.is_ok());
+    }
+
+    #[tokio::test]
+    async fn get_urls_test() {
+        let vars = vec![
+            Variant::_new(
+                Some(832000),
+                Some("video/mp4".to_string()),
+                Some("https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/480x480/rLx684w1bBcHv2Tq.mp4?tag=9".to_string()),
+
+            )
+        ];
+
+        let res = get_urls(&vars);
+        assert_eq!(res.len(), vars.len());
+    }
 }
