@@ -25,7 +25,7 @@ async fn whatever(url: &str) -> Result<Vec<String>, Box<dyn Error>> {
 #[post("/", data = "<input>")]
 fn index_api(input: Json<Input>) -> Result<Json<Value>, Box<dyn Error>> {
     let data: Vec<String> = whatever(&input.url)?;
-    let res = get_size(data)?;
+    let res = get_size(&data)?;
     Ok(Json(json!(res)))
 }
 
