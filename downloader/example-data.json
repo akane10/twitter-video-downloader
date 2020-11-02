@@ -1,35 +1,39 @@
 {
-  "geo": null,
+  "possibly_sensitive_appealable": false,
+  "coordinates": null,
+  "in_reply_to_user_id": null,
+  "id_str": "1322890773118001153",
   "favorited": true,
-  "entities": {
-    "hashtags": [],
+  "contributors": null,
+  "favorite_count": 37739,
+  "lang": "und",
+  "in_reply_to_status_id_str": null,
+  "retweet_count": 8608,
+  "in_reply_to_user_id_str": null,
+  "extended_entities": {
     "media": [
       {
-        "display_url": "pic.twitter.com/V9uh50KwoT",
-        "expanded_url": "https://twitter.com/GangOfAnimals/status/1134138613158109189/video/1",
-        "id": 1134138480253161472,
-        "id_str": "1134138480253161472",
-        "indices": [
-          0,
-          23
-        ],
-        "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1134138480253161472/pu/img/XKB_rRSMvImCPgH4.jpg",
-        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1134138480253161472/pu/img/XKB_rRSMvImCPgH4.jpg",
-        "sizes": {
-          "large": {
-            "h": 640,
-            "resize": "fit",
-            "w": 640
-          },
-          "medium": {
-            "h": 640,
-            "resize": "fit",
-            "w": 640
-          },
-          "small": {
-            "h": 640,
-            "resize": "fit",
-            "w": 640
+        "additional_media_info": {
+          "monetizable": false,
+          "source_user": {
+            "contributors_enabled": false,
+            "created_at": "Tue Aug 08 18:24:02 +0000 2017",
+            "default_profile": true,
+            "default_profile_image": false,
+            "description": "cute animals",
+            "entities": {
+              "description": {
+                "urls": []
+              }
+            },
+            "favourites_count": 0,
+            "follow_request_sent": false,
+            "followers_count": 63835,
+            "following": false,
+            "friends_count": 0,
+            "geo_enabled": false,
+       "resizh": "fit",
+            "w": 680
           },
           "thumb": {
             "h": 150,
@@ -37,26 +41,177 @@
             "w": 150
           }
         },
-        "source_status_id": 1134138613158109189,
-        "source_status_id_str": "1134138613158109189",
-        "source_user_id": 894987583465410560,
-        "source_user_id_str": "894987583465410560",
+        "type": "video",
+        "url": "https://t.co/0AXugMjPwx",
+        "video_info": {
+          "aspect_ratio": [
+            1,
+            1
+          ],
+          "duration_millis": 23240,
+          "variants": [
+            {
+              "bitrate": 1280000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1315223083586740225/vid/720x720/EV_bGxB3omHf9UHm.mp4?tag=13"
+            },
+            {
+              "bitrate": 832000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1315223083586740225/vid/480x480/k9mU2z26RXQGKspu.mp4?tag=13"
+            },
+            {
+              "content_type": "application/x-mpegURL",
+              "url": "https://video.twimg.com/amplify_video/1315223083586740225/pl/JMFR52Ugoh5aZ9ZF.m3u8?tag=13"
+            },
+            {
+              "bitrate": 432000,
+              "content_type": "video/mp4",
+              "url": "https://video.twimg.com/amplify_video/1315223083586740225/vid/320x320/yEq-D0Oy2lcsX68J.mp4?tag=13"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "id": 1323294043871346688,
+  "in_reply_to_status_id_str": null,
+  "user": {
+    "contributors_enabled": false,
+    "created_at": "Wed Oct 01 18:46:32 +0000 2008",
+    "default_profile": false,
+    "default_profile_image": false,
+    "description": "Go Fun The World. Get 9GAG app for the latest memes, gifs and videos: https://t.co/aMQ9pLLhWB. Contact us: 9gag@9gag.com",
+    "entities": {
+      "description": {
+        "urls": [
+          {
+            "display_url": "9gag.com/apps",
+            "expanded_url": "http://9gag.com/apps",
+            "indices": [
+              70,
+              93
+            ],
+            "url": "https://t.co/aMQ9pLLhWB"
+          }
+        ]
+      },
+      "url": {
+        "urls": [
+          {
+            "display_url": "9gag.com/apps",
+            "expanded_url": "http://9gag.com/apps",
+            "indices": [
+              0,
+              23
+            ],
+            "url": "https://t.co/aMQ9pLLhWB"
+          }
+        ]
+      }
+    },
+    "favourites_count": 1978,
+    "follow_request_sent": false,
+    "followers_count": 16747906,
+    "following": true,
+    "friends_count": 10,
+    "geo_enabled": false,
+    "has_extended_profile": false,
+    "id": 16548023,
+    "id_str": "16548023",
+    "is_translation_enabled": false,
+    "is_translator": false,
+    "lang": null,
+    "listed_count": 9360,
+    "location": "Universe",
+    "name": "9GAG",
+    "notifications": false,
+    "profile_background_color": "000000",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme2/bg.gif",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme2/bg.gif",
+    "profile_background_tile": true,
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/16548023/1563162940",
+    "profile_image_url": "http://pbs.twimg.com/profile_images/852355177260621824/UsIvWpWX_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/852355177260621824/UsIvWpWX_normal.jpg",
+    "profile_link_color": "0099FF",
+    "profile_sidebar_border_color": "FFFFFF",
+    "profile_sidebar_fill_color": "111111",
+    "profile_text_color": "666666",
+    "profile_use_background_image": false,
+    "protected": false,
+    "screen_name": "9GAG",
+    "statuses_count": 50617,
+    "time_zone": null,
+    "translator_type": "regular",
+    "url": "https://t.co/aMQ9pLLhWB",
+    "utc_offset": null,
+    "verified": true
+  },
+  "coordinates": null,
+  "favorited": false,
+  "contributors": null,
+  "in_reply_to_user_id": null,
+  "retweeted": false,
+  "id_str": "1323294043871346688",
+  "text": "You can stop begging, I'll give you anything!\n\n📹 r.minamiii | IG https://t.co/0AXugMjPwx",
+  "created_at": "Mon Nov 02 16:01:00 +0000 2020",
+  "in_reply_to_status_id": null,
+  "geo": null,
+  "truncated": false,
+  "possibly_sensitive": false,
+  "entities": {
+    "hashtags": [],
+    "media": [
+      {
+        "display_url": "pic.twitter.com/0AXugMjPwx",
+        "expanded_url": "https://twitter.com/9GAG/status/1323294043871346688/video/1",
+        "id": 1315223083586740225,
+        "id_str": "1315223083586740225",
+        "indices": [
+          65,
+          88
+        ],
+        "media_url": "http://pbs.twimg.com/amplify_video_thumb/1315223083586740225/img/3chJDrzNaOZyK5J-.jpg",
+        "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1315223083586740225/img/3chJDrzNaOZyK5J-.jpg",
+        "sizes": {
+          "large": {
+            "h": 720,
+            "resize": "fit",
+            "w": 720
+          },
+          "medium": {
+            "h": 720,
+            "resize": "fit",
+            "w": 720
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 680
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
         "type": "photo",
-        "url": "https://t.co/V9uh50KwoT"
+        "url": "https://t.co/0AXugMjPwx"
       }
     ],
     "symbols": [],
     "urls": [],
     "user_mentions": []
   },
-  "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-  "in_reply_to_status_id": null,
+  "source": "<a href=\"https://studio.twitter.com\" rel=\"nofollow\">Twitter Media Studio</a>",
   "place": null,
-  "user": {
-    "contributors_enabled": false,
-    "created_at": "Fri Aug 04 14:52:18 +0000 2017",
-    "default_profile": false,
-    "default_profile_image": false,
+  "retweet_count": 2232,
+  "lang": "en",
+  "in_reply_to_user_id_str": null,
+  "possibly_sensitive_appealable": false,
+  "in_reply_to_screen_name": null,
+  "is_quote_status": false
+}    "default_profile_image": false,
     "description": "Virtual Gallery. 🖼 We do not own any content posted. Sources: @1111_Links | Dm for removal.",
     "entities": {
       "description": {
@@ -76,9 +231,9 @@
         ]
       }
     },
-    "favourites_count": 6754,
+    "favourites_count": 6761,
     "follow_request_sent": false,
-    "followers_count": 1861335,
+    "followers_count": 1861419,
     "following": true,
     "friends_count": 20,
     "geo_enabled": false,
@@ -113,145 +268,7 @@
     "utc_offset": null,
     "verified": false
   },
-  "is_quote_status": false,
-  "id": 1322890773118001153,
-  "retweet_count": 8581,
-  "possibly_sensitive_appealable": false,
-  "created_at": "Sun Nov 01 13:18:33 +0000 2020",
-  "extended_entities": {
-    "media": [
-      {
-        "additional_media_info": {
-          "monetizable": false,
-          "source_user": {
-            "contributors_enabled": false,
-            "created_at": "Tue Aug 08 18:24:02 +0000 2017",
-            "default_profile": true,
-            "default_profile_image": false,
-            "description": "cute animals",
-            "entities": {
-              "description": {
-                "urls": []
-              }
-            },
-            "favourites_count": 0,
-            "follow_request_sent": false,
-            "followers_count": 63833,
-            "following": false,
-            "friends_count": 0,
-            "geo_enabled": false,
-            "has_extended_profile": false,
-            "id": 894987583465410560,
-            "id_str": "894987583465410560",
-            "is_translation_enabled": false,
-            "is_translator": false,
-            "lang": null,
-            "listed_count": 205,
-            "location": "",
-            "name": "🐾",
-            "notifications": false,
-            "profile_background_color": "F5F8FA",
-            "profile_background_image_url": null,
-            "profile_background_image_url_https": null,
-            "profile_background_tile": false,
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/894987583465410560/1544639727",
-            "profile_image_url": "http://pbs.twimg.com/profile_images/1055515698007564290/DbsQ3NjG_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1055515698007564290/DbsQ3NjG_normal.jpg",
-            "profile_link_color": "1DA1F2",
-            "profile_sidebar_border_color": "C0DEED",
-            "profile_sidebar_fill_color": "DDEEF6",
-            "profile_text_color": "333333",
-            "profile_use_background_image": true,
-            "protected": false,
-            "screen_name": "GangOfAnimals",
-            "statuses_count": 424,
-            "time_zone": null,
-            "translator_type": "none",
-            "url": null,
-            "utc_offset": null,
-            "verified": false
-          }
-        },
-        "display_url": "pic.twitter.com/V9uh50KwoT",
-        "expanded_url": "https://twitter.com/GangOfAnimals/status/1134138613158109189/video/1",
-        "id": 1134138480253161472,
-        "id_str": "1134138480253161472",
-        "indices": [
-          0,
-          23
-        ],
-        "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1134138480253161472/pu/img/XKB_rRSMvImCPgH4.jpg",
-        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1134138480253161472/pu/img/XKB_rRSMvImCPgH4.jpg",
-        "sizes": {
-          "large": {
-            "h": 640,
-            "resize": "fit",
-            "w": 640
-          },
-          "medium": {
-            "h": 640,
-            "resize": "fit",
-            "w": 640
-          },
-          "small": {
-            "h": 640,
-            "resize": "fit",
-            "w": 640
-          },
-          "thumb": {
-            "h": 150,
-            "resize": "crop",
-            "w": 150
-          }
-        },
-        "source_status_id": 1134138613158109189,
-        "source_status_id_str": "1134138613158109189",
-        "source_user_id": 894987583465410560,
-        "source_user_id_str": "894987583465410560",
-        "type": "video",
-        "url": "https://t.co/V9uh50KwoT",
-        "video_info": {
-          "aspect_ratio": [
-            1,
-            1
-          ],
-          "duration_millis": 24000,
-          "variants": [
-            {
-              "bitrate": 832000,
-              "content_type": "video/mp4",
-              "url": "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/480x480/rLx684w1bBcHv2Tq.mp4?tag=9"
-            },
-            {
-              "bitrate": 432000,
-              "content_type": "video/mp4",
-              "url": "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/320x320/-oyV5_rwvgthsq8X.mp4?tag=9"
-            },
-            {
-              "bitrate": 1280000,
-              "content_type": "video/mp4",
-              "url": "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/640x640/8lpcDipUtTOmeYDl.mp4?tag=9"
-            },
-            {
-              "content_type": "application/x-mpegURL",
-              "url": "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/pl/NRZ64gj1N8xjqpRP.m3u8?tag=9"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "possibly_sensitive": false,
-  "text": "https://t.co/V9uh50KwoT",
-  "lang": "und",
-  "in_reply_to_user_id": null,
-  "truncated": false,
-  "id_str": "1322890773118001153",
-  "in_reply_to_user_id_str": null,
-  "in_reply_to_screen_name": null,
-  "coordinates": null,
-  "in_reply_to_status_id_str": null,
-  "contributors": null,
-  "favorite_count": 37653,
-  "retweeted": false
+  "geo": null,
+  "place": null,
+  "in_reply_to_screen_name": null
 }

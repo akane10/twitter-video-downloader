@@ -101,8 +101,9 @@ pub async fn get_vid_urls(id: &str) -> Result<Vec<String>, Box<dyn Error>> {
         _ => Vec::new(),
     };
 
-    // println!("{:?}", get_urls(x));
     let urls = get_urls(&x);
+
+    // println!("{:?}", urls);
     Ok(urls)
 }
 
@@ -132,7 +133,7 @@ pub fn get_size(urls: &Vec<String>) -> Result<Vec<Input>, Box<dyn Error>> {
                     let xs = val.path_segments().map(|c| c.collect::<Vec<_>>());
                     let size = xs.and_then(|y| {
                         let len = y.len();
-                        if len > 5 {
+                        if len > 4 {
                             Some(y[len - 2].to_string())
                         } else {
                             None
@@ -152,6 +153,7 @@ pub fn get_size(urls: &Vec<String>) -> Result<Vec<Input>, Box<dyn Error>> {
         })
         .collect();
 
+    // println!("{:?}", x);
     Ok(x)
 }
 
@@ -161,7 +163,7 @@ mod tests {
 
     #[tokio::test]
     async fn get_tweet_test() {
-        let res = get_tweet("1322890773118001153").await;
+        let res = get_tweet("1323294043871346688").await;
         assert!(res.is_ok());
     }
 
@@ -173,7 +175,7 @@ mod tests {
 
     #[tokio::test]
     async fn get_vid_urls_test() {
-        let res = get_vid_urls("1322890773118001153").await;
+        let res = get_vid_urls("1323294043871346688").await;
         assert!(res.is_ok());
     }
 
@@ -185,10 +187,16 @@ mod tests {
 
     #[tokio::test]
     async fn get_size_test() {
+        // let urls = vec![
+        // "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/480x480/rLx684w1bBcHv2Tq.mp4?tag=9".to_string(),
+        // "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/320x320/-oyV5_rwvgthsq8X.mp4?tag=9".to_string(),
+        // "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/640x640/8lpcDipUtTOmeYDl.mp4?tag=9".to_string()
+        // ];
+        //
         let urls = vec![
-            "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/480x480/rLx684w1bBcHv2Tq.mp4?tag=9".to_string(),
-            "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/320x320/-oyV5_rwvgthsq8X.mp4?tag=9".to_string(),
-            "https://video.twimg.com/ext_tw_video/1134138480253161472/pu/vid/640x640/8lpcDipUtTOmeYDl.mp4?tag=9".to_string()
+            "https://video.twimg.com/amplify_video/1315223083586740225/vid/720x720/EV_bGxB3omHf9UHm.mp4?tag=13".to_string(),
+            "https://video.twimg.com/amplify_video/1315223083586740225/vid/480x480/k9mU2z26RXQGKspu.mp4?tag=13".to_string(),
+            "https://video.twimg.com/amplify_video/1315223083586740225/vid/320x320/yEq-D0Oy2lcsX68J.mp4?tag=13".to_string()
         ];
 
         let res = get_size(&urls);
