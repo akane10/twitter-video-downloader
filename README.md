@@ -2,7 +2,7 @@
 
 ## API
 
-POST | https://tvd.yapie.me/https://tvd.yapie.me/api
+POST | https://tvd.yapie.me/api
 
 Header :
 
