@@ -4,7 +4,7 @@
 
 POST | https://tvd.yapie.me/api
 
-Header :
+Example Request :
 
 ```json
 {
@@ -12,7 +12,7 @@ Header :
 }
 ```
 
-Response :
+Example Response :
 
 ```json
 [
